@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.main {
+    display: flex;
+    justify-content: space-around;
+}
+.main .left{
+    width: 30%;
+}
+#picture {
+    color: rgb(19, 200, 224);
+}
+.main .right{
+    width: 60%;
+}
+.main img{
+    height: 100px;
+    width: 100px;
+    object-fit: cover;
+}
+.register h4 {
+    margin: 0;
+    background-color: rgb(5, 221, 250);
+    color: white;
+    padding: 10px;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+.main input {
+    padding: 7px;
+    width: 97%;
+    margin-bottom: 12px;
+}
+#fn {
+    width: 45%;
+    margin-right: 8px;
+}
+#ln {
+    width: 45%;
+}
+mat-slider {
+    width: 90%;
+}
+.right label {
+    margin-right: 10px;
+}
+select {
+    width: 98%;
+    padding: 7px;
+    margin-bottom: 10px;
+}
+#subscribeToNewsletter {
+    display: inline;
+}
+.newsletter-checkbox {
+  display: flex;
+}
+.right .newsletter-checkbox input {
+    width: 8%;
+}
+
+.cancel {
+    padding: 7px 18px;
+    background: white;
+    border: 1px solid gray;
+    border-radius: 3px;
+    margin-left: 50%;
+}
+.submit {
+    padding: 8px 19px;
+    background: rgb(10, 192, 216);
+    border: none;
+    color: white;
+    border-radius: 3px;
+    margin-left: 15px;
+}
+
+mat-chip {
+    margin-right: 15px;
+    margin-bottom: 3px;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 5px;
+    color: white;
+}
+mat-icon {
+    margin-top: 10px;
+}
+.tag input {
+    width: 94%;
+}
+.tags {
+    width: 100%;
+    margin-bottom: 5px;
+}

@@ -1,0 +1,63 @@
+<div class="register">
+  <h4>Register</h4>
+  <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+    <div class="main">
+      <div class="left">
+        <img src="/assets/images/dummy.jpg" alt=""><br>
+        <input type="file" id="profilePicture" formControlName="profilePicture" style="display: none;">
+        <label for="profilePicture" id="picture">upload your photo</label>
+      </div>
+      <div class="right">
+        <input type="text" id="fn" formControlName="firstName" placeholder="First Name">
+        <input type="text" id="ln" formControlName="lastName" placeholder="Last Name"><br>
+        <input type="email"  formControlName="email" placeholder="Email"><br>
+        <input type="number"  formControlName="number" placeholder="(541)754-3010"><br>
+        <label for="">Age  </label>
+        <mat-slider thumbLabel [min]="18" [max]="100" [step]="1" formControlName="age"></mat-slider><br>
+        <select formControlName="state">
+          <option value="" disabled selected hidden>State</option>
+          <option value="maharashtra">Maharashtra</option>
+          <option value="gujrat">Gujrat</option>
+          <option value="punjab">Punjab</option>
+        </select><br>
+        <select formControlName="country">
+          <option value="" disabled selected hidden>Country</option>
+          <option value="india">India</option>
+          <option value="america">America</option>
+          <option value="russia">Russia</option>
+        </select><br>
+        <!-- -  -->
+        <select formControlName="addressType">
+          <option value="" disabled selected hidden>address</option>
+          <option value="home">Home</option>
+          <option value="company">Company</option>
+        </select>
+
+        <div *ngIf="profileForm.get('addressType').value === 'home'">
+          <label for="homeAddress1">Home Address 1</label>
+          <input type="text" id="homeAddress1" formControlName="homeAddress1">
+
+          <label for="homeAddress2">Home Address 2</label>
+          <input type="text" id="homeAddress2" formControlName="homeAddress2">
+        </div>
+
+        <div *ngIf="profileForm.get('addressType').value === 'company'">
+          <label for="companyAddress1">Company Address 1</label>
+          <input type="text" id="companyAddress1" formControlName="companyAddress1">
+
+          <label for="companyAddress2">Company Address 2</label>
+          <input type="text" id="companyAddress2" formControlName="companyAddress2">
+        </div>
+        <!-- ---- -->
+        <div class="newsletter-checkbox">
+          <input type="checkbox" id="subscribeToNewsletter" formControlName="subscribeToNewsletter">
+          <label for="subscribeToNewsletter">Subscribe to Newsletter</label>
+        </div>
+        <br>
+        <button class="cancel">Cancel</button>
+        <button class="submit" type="submit">Submit</button>
+      </div>
+    </div>
+  </form>
+
+</div>

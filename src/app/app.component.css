@@ -1,0 +1,45 @@
+.header {
+    display: flex;
+    background-color: rgb(32, 211, 235);
+    justify-content: space-around;
+}
+
+ul {
+    /* border: 1px solid red; */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    list-style-type: none;
+    color: white;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+ul li {
+    margin-right: 40px;
+}
+ul li:hover {
+    border-top: 3px solid rgb(6, 140, 157);
+}
+ul li a{
+    text-decoration: none;
+    color: white;
+}
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: black;
+    color: white;
+    padding: 30px;
+}
+.footer input {
+    width: 240px;
+    border: 2px solid rgb(56, 216, 238);
+    background-color: black;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
