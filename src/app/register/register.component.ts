@@ -18,8 +18,8 @@ export class RegisterComponent implements OnInit {
       profilePicture: [null, [this.profilePictureValidator]],
       firstName: ['', [Validators.required, this.firstNameValidator]],
       lastName: ['', Validators.required],
-      email: ['', Validators.required],
-      number: ['', Validators.required],
+      email: ['', Validators.required, Validators.email],
+      number: ['', Validators.required, Validators.pattern("[0-9 ]{12}")],
       age: [18, [Validators.required, Validators.min(18), Validators.max(100)]],
       state: ['', Validators.required],
       country: ['', Validators.required],
@@ -28,7 +28,6 @@ export class RegisterComponent implements OnInit {
       homeAddress2: [''],
       companyAddress1: [''],
       companyAddress2: [''],
-      hobbies: ['', Validators.required],
       subscribeToNewsletter: [false],
     });
    }
